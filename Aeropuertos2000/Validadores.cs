@@ -98,7 +98,7 @@ namespace Aeropuertos2000
             return eleccion;
         }
 
-        //Incertar lista, array o diccionario donde comparar y metodo de busqueda.
+        //
          
         public static bool ValidarCodigo(string codigo)
         {
@@ -139,20 +139,7 @@ namespace Aeropuertos2000
             return num;
         }
 
-        /*
-        public static bool ValidarCodigo(string code)
-        {
-            bool flag = false;
-            foreach (var a in NominaCursos.nomina)
-            {
-                if (code == a.Key)
-                {
-                    flag = true;
-                }
-            }
-            return flag;
-        }
-        */
+        
         public static string Valtexto(string texto)
         {
             bool flag;
@@ -180,17 +167,23 @@ namespace Aeropuertos2000
         {
             bool flag=false;
             string ingreso = "";
+            int a; 
             do
             {
                 Console.Write(texto);
                 ingreso = Console.ReadLine();
-                if (ingreso.Length > 3 || ingreso.Length <= 2)
+                
+                if ((ingreso.Length > 3 || ingreso.Length <= 2))
+                {
+                    flag = true;
+                    Console.WriteLine("Debe ingresar un codigo de tres letras.");
+                }else if(int.TryParse(ingreso, out a))
                 {
                     flag = true;
                     Console.WriteLine("Debe ingresar un codigo de tres letras.");
                 }
                 else { flag = false; }
-
+               
 
 
             } while (flag == true);
@@ -199,6 +192,6 @@ namespace Aeropuertos2000
 
 
         }
-        //nuevo validador aqui
+        //
     }
 }

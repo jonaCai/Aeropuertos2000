@@ -100,11 +100,11 @@ E)Salir
             
             for(int a=0; a< linea.Length-1;++a)
             {
-                //nose que le pasa a los string estos...no me dejaba escribir despues, sino que sobrescribia desde el inicio.
+                //
                 Console.Write("*");
-                //linea_modificada = linea[a].ToString().Insert(Suplemento,"*");
+                
                 Console.WriteLine($"{ linea[a].TrimEnd().PadRight(lineamayor)}*");
-                //string de cadenas, modificables coherentemente gracias al trimend
+                //
 
             }
             for (int a = 0; a < lineamayor+2; a++)
